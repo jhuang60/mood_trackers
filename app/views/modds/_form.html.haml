@@ -1,0 +1,16 @@
+= form_for @modd do |f|
+  - if @modd.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@modd.errors.count, "error")} prohibited this modd from being saved:"
+      %ul
+        - @modd.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :short
+    = f.text_field :short
+  .field
+    = f.label :note
+    = f.text_area :note
+  .actions
+    = f.submit 'Save'

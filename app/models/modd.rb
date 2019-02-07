@@ -1,0 +1,2 @@
+class Modd < ApplicationRecord
+end

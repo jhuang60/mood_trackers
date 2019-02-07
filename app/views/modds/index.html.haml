@@ -1,0 +1,23 @@
+%h1 Listing modds
+
+%table
+  %thead
+    %tr
+      %th Short
+      %th Note
+      %th
+      %th
+      %th
+
+  %tbody
+    - @modds.each do |modd|
+      %tr
+        %td= modd.short
+        %td= modd.note
+        %td= link_to 'Show', modd
+        %td= link_to 'Edit', edit_modd_path(modd)
+        %td= link_to 'Destroy', modd, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Modd', new_modd_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Short:
+  = @modd.short
+%p
+  %b Note:
+  = @modd.note
+
+= link_to 'Edit', edit_modd_path(@modd)
+\|
+= link_to 'Back', modds_path
